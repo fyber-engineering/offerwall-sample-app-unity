@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 55cebdc6721764eebb37878045025402
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - buttonShowOfferWallObject: {fileID: 7550946875988986096, guid: 62d9a197fd59d45cbb2bfa1db1ad101e, type: 3}
+  - buttonRequestVirtualCurrency: {fileID: 5185493775646586315, guid: 9cc0e760fd6cb4b349fcad5a2a04ad84, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

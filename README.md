@@ -52,12 +52,12 @@ Click `File -> Build and Run`.
 
 For iOS we recommend you Build and Run in 2 separate steps:
 1. `File -> Build Settings` -> `Build`
-2. From the location where the XCode project was exported to run `pod install --repo-update`
+2. From the location where the Xcode project was exported to run `pod install --repo-update`
    1. This should bring the necessary native dependencies and create a `.xcworkspace` file
-2. Click on the `.xcworkspace` file to open the XCode project
+2. Click on the `.xcworkspace` file to open the Xcode project
 3. If you're building for a device, make sure you configure a valid provisionsing profile
 4. Make sure you set `Enable Bitcode` to `No` in the `Build Settings` for all the build targets
-5. Press 'Play'
+5. Run the app
 
 # Navigating the project code
 

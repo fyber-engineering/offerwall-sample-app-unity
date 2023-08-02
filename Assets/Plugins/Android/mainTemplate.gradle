@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion **APIVERSION**
+    buildToolsVersion '**BUILDTOOLS**'
+
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 31
+
+        versionCode Integer.parseInt(project.findProperty('versionCode') ?: new Date().format('yyyyMMdd', TimeZone.getTimeZone('UTC')))
+        versionName version
+
+        // This setting is enabled by default if your min SDK version is greater or equal than 21
+        // This is due to Dalvik's method count limit per dex file being exceeded as you integrate more networks
+        multiDexEnabled true
+        
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+    }
+
+	aaptOptions {
+		noCompress = ['.ress', '.resource', '.obb'] + unityStreamingAssets.tokenize(', ')
+		ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+	}
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+**SIGN**
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+**DEPS**
+}
+
+
+**SOURCE_BUILD_SETUP**

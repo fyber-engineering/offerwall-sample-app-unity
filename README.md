@@ -23,7 +23,7 @@ Table of contents
 * Android 4.1 (API level 16)+ (when building for Android)
 * iOS 9.0+ (when building for iOS). **Note** that Offers will only be rendered on devices running iOS 13.4 or higher
 
-*This app is developed using Unity Editor 2020.3.48f1f1 but it's expected to work with any Editor between 2020 and 2022
+*This app is developed using Unity Editor 2020.3.48f1f1, but it's expected to work with any Editor between 2020 and 2022
 
 # Project Setup
 
@@ -34,7 +34,7 @@ To achieve that, a dependency to the DT FairBid Unity Plugin is added in the Pac
 You should be able to verify the Package is correctly integrated by 
 1. Opening Unity 3D
 2. Clicking on `Window` -> `Package Manager`
-3. Choosing `In Project` from the drop down that lets you select among the repositories (on the top left).
+3. Choosing `In Project` from the drop-down that lets you select among the repositories (on the top left).
 4. Observe `Packages - Fyber` which you can expand and observe a `FairBid` package (with the version matching the one declared in the manfiest).
 
 You are ready to go!  
@@ -50,7 +50,7 @@ Click `File -> Build and Run`.
 
 ## iOS
 
-For iOS we recommend you Build and Run in 2 separate steps:
+For iOS, we recommend you Build and Run in 2 separate steps:
 1. `File -> Build Settings` -> `Build`
 2. From the location where the Xcode project was exported to run `pod install --repo-update`
    1. This should bring the necessary native dependencies and create a `.xcworkspace` file

@@ -10,6 +10,7 @@ public class OfferWallIntegration : MonoBehaviour {
     public Text FairbidPluginVersionText;
     public Text VirtualCurrencyResultText;
 
+    public static string SALT_TOKEN = "DEFAULT_SALT_TOKEN";
     public static string SECURITY_TOKEN = "DEFAULT_SECURITY_TOKEN";
     public static string APP_ID = "DEFAULT_APP_ID";
 
@@ -17,8 +18,10 @@ public class OfferWallIntegration : MonoBehaviour {
     // with the ones you configured in the console.
     public const string IOS_APP_ID = "135708";
     public const string IOS_SECURITY_TOKEN = "sec_135708"; 
+    public const string IOS_SALT_TOKEN = "63069c5cdc83c56a7a18ef08bb22d183a2b46867ad25b64f5151537d861c0b08"; 
     public const string ANDROID_APP_ID = "135704";
     public const string ANDROID_SECURITY_TOKEN = "sec_135704"; 
+    public const string ANDROID_SALT_TOKEN = "fb3876c383844db96d6ddece3c0cd9eb7f9029b0e7f319f0a98da55c1b76d802"; 
 
     public void Start()
     {
@@ -47,7 +50,7 @@ public class OfferWallIntegration : MonoBehaviour {
         // delegates and start the SDK with a valid security token.
         SubscribeVirtualCurrencyDelegates();
 
-        OfferWall.StartSDK(APP_ID, SECURITY_TOKEN, disableAdvertisingId);
+        OfferWall.StartSDK(APP_ID, SALT_TOKEN, SECURITY_TOKEN, disableAdvertisingId);
 
         // If, on the other hand you prefer to do server side rewarding, you can simply start the SDK by passing only the APP_ID
         // OfferWall.StartSDK(APP_ID);
@@ -153,12 +156,15 @@ public class OfferWallIntegration : MonoBehaviour {
     {
         #if UNITY_IOS
             APP_ID = IOS_APP_ID;
+            SALT_TOKEN = IOS_SALT_TOKEN;
             SECURITY_TOKEN = IOS_SECURITY_TOKEN;
         #elif UNITY_ANDROID
             APP_ID = ANDROID_APP_ID;
+            SALT_TOKEN = ANDROID_SALT_TOKEN;
             SECURITY_TOKEN = ANDROID_SECURITY_TOKEN;
         #else
             APP_ID = "DEFAULT_APP_ID";
+            SALT_TOKEN = "DEFAULT_SALT_TOKEN";
             SECURITY_TOKEN = "DEFAULT_SECURITY_TOKEN";
         #endif
     }

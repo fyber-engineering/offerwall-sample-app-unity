@@ -19,11 +19,11 @@ Table of contents
     - [License](#license)
 
 # Prerequisites
-* Unity Editor version 2020.3.+ 
+* Unity Editor version 2022.3 LTS
 * Android 4.1 (API level 16)+ (when building for Android)
 * iOS 9.0+ (when building for iOS). **Note** that Offers will only be rendered on devices running iOS 13.4 or higher
 
-*This app is developed using Unity Editor 2020.3.48f1f1, but it's expected to work with any Editor between 2020 and 2022
+*This app is developed using Unity Editor 2022.3 LTS
 
 # Project Setup
 
